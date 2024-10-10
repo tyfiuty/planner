@@ -1,0 +1,207 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    direction: rtl;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+#header {
+    background-color: #0097b2;
+    color: white;
+    padding: 10px 0;
+}
+
+#clock {
+    font-size: 1em;
+    text-align: center;
+}
+
+#time {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+#date {
+    font-size: 2em;
+    margin: 0;
+}
+
+#planner {
+    margin: 20px auto;
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 30px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.5em;
+}
+
+.timer {
+    font-size: 1.2em;
+    color: #0097b2;
+}
+
+button.start {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 2em;
+    cursor: pointer;
+      --c:  #229091; /* the color*/
+  
+  box-shadow: 0 0 0 .1em inset var(--c); 
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background: 
+    var(--_g) calc(var(--_p,0%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p,0%)) 0%,
+    var(--_g) calc(var(--_p,0%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p,0%)) 100%;
+  background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+  outline-offset: .1em;
+  transition: background-size .4s, background-position 0s .4s;
+}
+button.stop {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 2em;
+    cursor: pointer;
+      --c:  #E95A49; /* the color*/
+  
+  box-shadow: 0 0 0 .1em inset var(--c); 
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background: 
+    var(--_g) calc(var(--_p,0%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p,0%)) 0%,
+    var(--_g) calc(var(--_p,0%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p,0%)) 100%;
+  background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+  outline-offset: .1em;
+  transition: background-size .4s, background-position 0s .4s;
+}
+
+button:hover {
+  --_p: 100%;
+  transition: background-position .4s, background-size 0s;
+}
+button:active {
+  box-shadow: 0 0 9e9q inset #0009; 
+  background-color: var(--c);
+  color: #fff;
+}
+button.start {
+    /* background-color: #229091; */
+    color: black;
+}
+
+button.stop {
+    /* background-color: #E95A49; */
+    color: black;
+}
+
+
+
+
+الأساسيات
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    direction: rtl;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #333;
+    font-size: 4vw; /* حجم النص يتغير بناءً على عرض الشاشة */
+}
+
+#header {
+    background-color: #0097b2;
+    color: white;
+    padding: 1vh 0;
+}
+
+#clock {
+    font-size: 2vw; /* حجم الساعة يتغير بناءً على عرض الشاشة */
+    text-align: center;
+}
+
+#time {
+    font-size: 3vw;
+    margin: 0;
+}
+
+#date {
+    font-size: 2.5vw;
+    margin: 0;
+}
+
+#planner {
+    margin: 5vh auto;
+    width: 90%; /* التناسب مع الشاشة */
+    background-color: #fff;
+    padding: 3vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* جدول المهام */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 2vw; /* الحواف تكون ديناميكية بناءً على العرض */
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 3vw; /* حجم النص داخل الجدول يتغير مع الشاشة */
+}
+
+.timer {
+    font-size: 2.5vw;
+    color: #0097b2;
+}
+
+/* أزرار المؤقت */
+button.start, button.stop {
+    padding: 2vw 5vw;
+    margin: 1vw;
+    font-size: 3vw;
+    cursor: pointer;
+}
+
+/* استجابة للأجهزة الصغيرة */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 6vw; /* تكبير العنوان على الشاشات الصغيرة */
+    }
+
+    #time, #date {
+        font-size: 5vw; /* تكبير الساعة والتاريخ */
+    }
+
+    th, td {
+        font-size: 5vw;
+        padding: 3vw;
+    }
+
+    button.start, button.stop {
+        font-size: 5vw; /* تكبير الأزرار على الشاشات الصغيرة */
+        padding: 3vw;
+    }
+}
